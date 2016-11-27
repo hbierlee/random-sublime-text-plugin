@@ -71,6 +71,9 @@ class RandomText(sublime_plugin.TextCommand):
 
     def get_countries(self):
         return self.get_data_file('countries.txt')
+
+    def get_colors(self):
+        return self.get_data_file('colors.txt')
 """
 Window commands
 """
