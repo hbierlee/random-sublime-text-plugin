@@ -286,6 +286,16 @@ class RandomCountryCommand(RandomText):
     def run(self, view, **kwargs):
         self.insert(view, self.generate_country)
 
+class RandomColorCommand(RandomText):
+
+    def generate_color(self):
+        colors = self.get_colors()
+        return r.choice(colors)
+
+    def run(self, view, **kwargs):
+        self.text_command = "random_color"
+        self.insert(view, self.generate_color)
+
 """
 END Text commands
 """
